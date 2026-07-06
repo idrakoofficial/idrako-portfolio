@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IDRAKO — AI Director</title>
+<meta name="description" content="Idrako. AI director. Cinematic fantasy and sci-fi worlds, summoned frame by frame.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=4">
+</head>
+<body>
+
+<!-- SVG defs: liquid glass displacement -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <filter id="lg-dist" x="-20%" y="-20%" width="140%" height="140%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.008 0.012" numOctaves="2" seed="7" result="noise"/>
+    <feGaussianBlur in="noise" stdDeviation="2" result="soft"/>
+    <feDisplacementMap in="SourceGraphic" in2="soft" scale="70" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+</svg>
+
+<!-- ============ ENTRY FADE ============ -->
+<div id="fade" aria-hidden="true"></div>
+
+<!-- ============ OVERLAYS ============ -->
+<div id="vignette" aria-hidden="true"></div>
+<div id="ambient" aria-hidden="true"></div>
+<div id="waves" aria-hidden="true"><i></i><i></i><i></i></div>
+<canvas id="stars" aria-hidden="true"></canvas>
+
+<!-- ============ NAV ============ -->
+<header id="nav">
+  <a class="brand" href="#top" data-scroll><img src="assets/logo.svg" alt="Idrako logo"></a>
+  <nav class="pills glass" aria-label="Main">
+    <a href="#origin" data-scroll>origin</a>
+    <a href="#work" data-scroll>work</a>
+    <a href="#contact" data-scroll>contact</a>
+  </nav>
+  <a class="cta glass" href="#contact" data-scroll><span>summon me</span><i class="arrow" aria-hidden="true">&#8599;</i></a>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section id="hero">
+    <div class="hero-media">
+      <video src="video/reel-finale-2.mp4" poster="posters/reel-finale-2.jpg" autoplay muted loop playsinline></video>
+    </div>
+    <div class="hero-shade" aria-hidden="true"></div>
+
+    <div class="hero-eyebrow reveal">
+      <span class="tick" aria-hidden="true"></span>
+      <p>idrako &mdash; ai director<br>fantasy &middot; sci-fi &middot; cinema</p>
+    </div>
+
+    <div class="hero-title">
+      <p class="setup reveal">the feed is full of noise. this is a door.</p>
+      <h1><span class="line"><span>Become</span></span><span class="line"><span>a myth</span></span></h1>
+      <p class="hero-sub reveal">I direct worlds that don't exist yet.<br>Summoned frame by frame. No set. No permission.</p>
+      <div class="hero-actions reveal">
+        <a class="cta glass big" href="#work" data-scroll><span>enter the vault</span><i class="arrow" aria-hidden="true">&#8599;</i></a>
+      </div>
+    </div>
+
+    <a class="outnow glass reveal" href="#work" data-scroll data-feature="pov-drago">
+      <span class="on-tag">out now</span>
+      <img src="posters/pov-drago.jpg" alt="Dragonback reel">
+      <span class="on-title">dragonback <em>2026</em></span>
+    </a>
+
+  </section>
+
+  <!-- ============ BRAND MARQUEE ============ -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <img class="mk-logo" src="assets/logo.svg" alt="">
+      <img class="mk-word" src="assets/wordmark.svg" alt="">
+      <img class="mk-logo" src="assets/logo.svg" alt="">
+      <img class="mk-word" src="assets/wordmark.svg" alt="">
+      <img class="mk-logo" src="assets/logo.svg" alt="">
+      <img class="mk-word" src="assets/wordmark.svg" alt="">
+      <img class="mk-logo" src="assets/logo.svg" alt="">
+      <img class="mk-word" src="assets/wordmark.svg" alt="">
+      <img class="mk-logo" src="assets/logo.svg" alt="">
+      <img class="mk-word" src="assets/wordmark.svg" alt="">
+      <img class="mk-logo" src="assets/logo.svg" alt="">
+      <img class="mk-word" src="assets/wordmark.svg" alt="">
+      <img class="mk-logo" src="assets/logo.svg" alt="">
+      <img class="mk-word" src="assets/wordmark.svg" alt="">
+      <img class="mk-logo" src="assets/logo.svg" alt="">
+      <img class="mk-word" src="assets/wordmark.svg" alt="">
+    </div>
+  </div>
+
+  <!-- ============ ORIGIN ============ -->
+  <section id="origin">
+    <div class="sec-head">
+      <span class="sec-num">01</span>
+      <span class="sec-label">origin</span>
+    </div>
+
+    <h2 class="statement">
+      <span class="line"><span>One author.</span></span>
+      <span class="line"><span>One obsession.</span></span>
+    </h2>
+
+    <p class="origin-lead reveal">
+      I'm Idrako. I build cinematic worlds — film, image, music —
+      with a director's eye and machines that obey it.
+      The tools are new. The hunger is old.
+    </p>
+
+    <div class="origin-grid">
+      <article class="opanel glass reveal">
+        <span class="o-num">i</span>
+        <h3>The Author.</h3>
+        <p>not a studio. not a service. one person with a vision,
+        building a myth in the open. the dragon isn't a logo —
+        it's the identity.</p>
+      </article>
+      <article class="opanel glass reveal">
+        <span class="o-num">ii</span>
+        <h3>The Mission.</h3>
+        <p>to direct worlds that don't exist yet — and make you stand
+        inside them. every frame earns its place. nothing casual ships.</p>
+      </article>
+      <article class="opanel glass reveal">
+        <span class="o-num">iii</span>
+        <h3>The Vision.</h3>
+        <p>a global presence built on fantasy and sci-fi.
+        discipline creates power. mystery builds legacy.
+        power is not given. it is taken.</p>
+      </article>
+    </div>
+
+    <p class="origin-close reveal">built in silence. remembered forever.</p>
+  </section>
+
+  <!-- ============ WORK ============ -->
+  <section id="work">
+    <div class="sec-head">
+      <span class="sec-num">02</span>
+      <span class="sec-label">the work</span>
+    </div>
+
+    <div class="work-top">
+      <h2 class="work-title reveal">Every reel<br>is a doorway.</h2>
+      <div class="tabs glass reveal" role="tablist" aria-label="Portfolio category">
+        <button class="tab on" role="tab" aria-selected="true" data-deck="brand">brand</button>
+        <button class="tab" role="tab" aria-selected="false" data-deck="school">school</button>
+      </div>
+    </div>
+
+    <div id="stage">
+      <div class="stage-media">
+        <video class="layerA" muted loop playsinline preload="metadata"></video>
+        <video class="layerB" muted loop playsinline preload="metadata"></video>
+      </div>
+      <div class="stage-shade" aria-hidden="true"></div>
+      <div class="stage-info">
+        <h3 class="stage-title"><span></span></h3>
+        <p class="stage-meta"></p>
+        <p class="stage-log"></p>
+      </div>
+      <div class="stage-index" aria-hidden="true">01</div>
+      <button class="stage-sound glass" type="button" aria-label="Toggle sound" aria-pressed="false">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line class="mute-x" x1="16" y1="9" x2="22" y2="15"/><line class="mute-x" x1="22" y1="9" x2="16" y2="15"/><path class="wave" d="M15.5 8.5a5 5 0 0 1 0 7"/></svg>
+      </button>
+    </div>
+
+    <div class="rail" role="list"></div>
+    <div id="wipe" aria-hidden="true"><img src="assets/logo.svg" alt=""></div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact">
+    <div class="sec-head">
+      <span class="sec-num">03</span>
+      <span class="sec-label">contact</span>
+    </div>
+
+    <h2 class="statement caps">
+      <span class="line"><span>Summon</span></span>
+      <span class="line"><span>me</span></span>
+    </h2>
+
+    <p class="contact-lead reveal">
+      a world you want built. a frame you can't get out of your head.
+      a brand that needs cinema, not clips. tell me.
+    </p>
+
+    <a class="email reveal" href="mailto:idrako.official@gmail.com">idrako.official@gmail.com</a>
+
+    <div class="orbs reveal">
+      <a class="orb glass" href="https://www.instagram.com/idrako.official" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5A5.5 5.5 0 1 1 6.5 13 5.5 5.5 0 0 1 12 7.5zm0 2A3.5 3.5 0 1 0 15.5 13 3.5 3.5 0 0 0 12 9.5zM17.8 5a1.2 1.2 0 1 1-1.2 1.2A1.2 1.2 0 0 1 17.8 5z"/></svg>
+        <span>instagram</span>
+      </a>
+      <a class="orb glass" href="https://www.youtube.com/@Idrako.official" target="_blank" rel="noopener" aria-label="YouTube">
+        <svg viewBox="0 0 24 24"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.76-1.77C18.25 5 12 5 12 5s-6.25 0-7.84.43A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.76 1.77C5.75 19 12 19 12 19s6.25 0 7.84-.43a2.5 2.5 0 0 0 1.76-1.77A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8zM10 15.2V8.8L15.6 12z"/></svg>
+        <span>youtube</span>
+      </a>
+      <a class="orb glass" href="https://www.tiktok.com/@idrako.official" target="_blank" rel="noopener" aria-label="TikTok">
+        <svg viewBox="0 0 24 24"><path d="M16.7 2h-3.1v13.6a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .9.1V9.6a6.3 6.3 0 0 0-.9-.06A6.06 6.06 0 1 0 16.76 15.6V8.7A7.7 7.7 0 0 0 21 10V6.9a4.9 4.9 0 0 1-4.3-4.9z"/></svg>
+        <span>tiktok</span>
+      </a>
+      <a class="orb glass" href="https://x.com/IdrakoOfficial" target="_blank" rel="noopener" aria-label="X">
+        <svg viewBox="0 0 24 24"><path d="M17.7 3H21l-7.3 8.3L22.2 21h-6.7l-5.3-6.2L4.2 21H1l7.8-8.9L1.8 3h6.9l4.8 5.7zm-1.2 16h1.9L6.9 4.9H4.9z"/></svg>
+        <span>x</span>
+      </a>
+      <a class="orb glass" href="https://www.threads.net/@idrako.official" target="_blank" rel="noopener" aria-label="Threads">
+        <svg viewBox="0 0 24 24"><path d="M12.7 11.2c1.7.1 3 .6 3.9 1.5.9 1 1.4 2.3 1.3 3.9-.1 1.9-1 3.4-2.4 4.4-1.2.8-2.7 1.2-4.4 1.1-2.7-.2-4.8-1.3-6.1-3.3C3.9 17 3.3 14.8 3.3 12c0-2.8.6-5 1.7-6.8C6.3 3.2 8.4 2.1 11.1 2c2.5-.2 4.6.5 6.1 1.9 1 1 1.7 2.2 2.1 3.7l-2 .5c-.3-1.1-.8-2-1.5-2.7-1-1-2.5-1.5-4.5-1.4-2 .1-3.5.9-4.5 2.4-.9 1.4-1.4 3.2-1.4 5.6 0 2.4.5 4.2 1.4 5.6 1 1.5 2.5 2.3 4.6 2.4 1.3.1 2.4-.2 3.2-.8.9-.6 1.4-1.5 1.5-2.7 0-.9-.2-1.6-.7-2.1-.3-.3-.7-.6-1.2-.7-.1.8-.4 1.5-.8 2.1-.7.9-1.7 1.4-3 1.5-1 .1-1.9-.2-2.6-.7-.8-.6-1.3-1.5-1.3-2.5 0-1.9 1.5-3.2 3.9-3.4.7-.1 1.4 0 2.1.1v-.3c0-.7-.3-1.2-.7-1.6-.4-.3-1-.5-1.7-.5-1 0-1.9.3-2.4 1l-1.6-1.1c.9-1.2 2.3-1.9 4.1-1.9 1.2 0 2.3.4 3 1.1.8.7 1.2 1.8 1.2 3.1zm-4.1 4.3c0 .8.7 1.3 1.7 1.2 1.4-.1 2.2-.9 2.4-2.6-.6-.1-1.2-.2-1.8-.1-1.5.1-2.3.6-2.3 1.5z"/></svg>
+        <span>threads</span>
+      </a>
+      <a class="orb glass" href="https://open.spotify.com/intl-it/artist/6WNUzAlXw4T6A8kM6XRzPc" target="_blank" rel="noopener" aria-label="Spotify">
+        <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm4.6 14.4a.62.62 0 0 1-.86.21 10.5 10.5 0 0 0-6.28-1.32 12 12 0 0 0-2 .34.63.63 0 0 1-.3-1.22 13.6 13.6 0 0 1 2.24-.38 11.8 11.8 0 0 1 7 1.51.62.62 0 0 1 .2.86zm1.24-2.77a.78.78 0 0 1-1.07.26 13.1 13.1 0 0 0-7.5-1.61 13.4 13.4 0 0 0-2.5.44.78.78 0 0 1-.44-1.5 15 15 0 0 1 2.8-.5 14.6 14.6 0 0 1 8.45 1.84.78.78 0 0 1 .26 1.07zm.11-2.88a17.5 17.5 0 0 0-9.44-1.66 17 17 0 0 0-2.6.44.94.94 0 1 1-.48-1.81 19 19 0 0 1 2.9-.49 19.4 19.4 0 0 1 10.5 1.86.94.94 0 0 1-.88 1.66z"/></svg>
+        <span>spotify</span>
+      </a>
+      <a class="orb glass" href="mailto:idrako.official@gmail.com" aria-label="Email">
+        <svg viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm.5 2.6L12 12l7.5-5.4H4.5zM20 8.3l-8 5.7-8-5.7V18h16V8.3z"/></svg>
+        <span>email</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer>
+    <div class="foot-wordmark" aria-hidden="true"><img src="assets/wordmark.svg" alt=""></div>
+    <div class="foot-row">
+      <p>built in silence. remembered forever.</p>
+      <p>&copy; 2026 idrako &mdash; every world here was directed, not found.</p>
+    </div>
+  </footer>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+<script src="js/main.js?v=4"></script>
+</body>
+</html>
